@@ -1,13 +1,13 @@
-name: Run Python
+name: Run .py
 
 on:
   workflow_dispatch:
 jobs:
   run:
-    name: Run-Python
+    name: Run-py
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Do Something
+      - name: runpy
         run: python main.py
