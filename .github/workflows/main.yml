@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Do Something
-        run: python main.py
+        run: python psychodinae/actionstest2/main.py
