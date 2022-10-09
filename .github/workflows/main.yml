@@ -4,6 +4,8 @@ on:
   repository_dispatch:
     inputs:
       name:
+        description: 'run python'
+        default: 'blah'
         required: false
 jobs:
   build:
