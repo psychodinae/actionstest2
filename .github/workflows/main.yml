@@ -1,0 +1,12 @@
+name: Run Python
+
+on:
+  repository_dispatch:
+    types: run_python
+jobs:
+  build:
+    name: Run-Python
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do Something
+        run: python main.py
