@@ -3,9 +3,11 @@ name: Run Python
 on:
   workflow_dispatch:
 jobs:
-  build:
+  run:
     name: Run-Python
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: Do Something
         run: python psychodinae/actionstest2/main.py
