@@ -2,7 +2,9 @@ name: Run Python
 
 on:
   repository_dispatch:
-    types: run_python
+    inputs:
+      name:
+        required: false
 jobs:
   build:
     name: Run-Python
