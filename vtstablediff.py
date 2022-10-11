@@ -1,4 +1,4 @@
-Umimport os
+import os
 import asyncio
 import time
 
