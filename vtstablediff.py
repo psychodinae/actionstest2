@@ -41,19 +41,18 @@ async def get_image(users_data):
 def main():
     u_data = scraper.get_user_prompts(thread)
     user_responses = asyncio.run(get_image(u_data))
-    print(user_responses)
+    # print(user_responses)
     for user in user_responses:
-        print(user)
+        # print(user)
         if "img" in user:
             scraper.reply(user["author"], user["img"])
         time.sleep(40)
     time.sleep(40)
     main()
 
-#try:
-#    main()
-#except Exception as e:
-#    print(e)
-#    time.sleep(5)
-#    main()
-main()
+try:
+    main()
+except Exception as e:
+    print(e)
+    time.sleep(2⁰)
+    main()
