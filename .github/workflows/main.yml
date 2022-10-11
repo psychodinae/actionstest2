@@ -10,4 +10,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: runpy
+        env:
+           THREAD_URL: ${{Secrets.THREAD_URL}}
+           FORUM_COOKIE: ${{Secrets.FORUM_COOKIE}}
+           VERCEL_URL: ${{secrets.VERCEL_URL}}
+           API_TOKEN: ${{secrets.API_TOKEN}}
         run: python main.py
