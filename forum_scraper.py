@@ -74,6 +74,6 @@ class ForumScraper:
         self.ses.get("https://www.ignboards.com/account/alerts")
         for r in replies[-unread:]:
             if any([x in r["phrase"] for x in ["imagine/", "Imagine/"]]):
-                r["phrase"] = r["phrase"].replace("imagine/", "").replace("Imagine/", "").replace("imagine/", "").replace("Imagine/", "").strip()
+                r["phrase"] = r["phrase"].replace("imagine/", "").replace("Imagine/", "").strip()
                 result.append(r)
         return result
