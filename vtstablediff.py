@@ -16,7 +16,7 @@ payload = {
     "key": api_token,
     "prompt": "",
     "seed": 12347,
-    "steps": 20
+    "steps": 30
 }
 
 scraper = ForumScraper(thread, cookie)
