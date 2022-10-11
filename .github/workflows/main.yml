@@ -1,4 +1,4 @@
-name: Run .py
+Umname: Run .py
 
 on:
   workflow_dispatch:
@@ -15,4 +15,4 @@ jobs:
            FORUM_COOKIE: ${{Secrets.FORUM_COOKIE}}
            VERCEL_URL: ${{secrets.VERCEL_URL}}
            API_TOKEN: ${{secrets.API_TOKEN}}
-        run: python main.py
+        run: python vtstablediff.py
