@@ -1,4 +1,4 @@
-Umname: Run .py
+name: Run .py
 
 on:
   workflow_dispatch:
