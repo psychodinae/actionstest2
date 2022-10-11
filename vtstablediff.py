@@ -1,4 +1,4 @@
-import os
+Umimport os
 import asyncio
 import time
 
@@ -50,9 +50,10 @@ def main():
     time.sleep(40)
     main()
 
-try:
-    main()
-except Exception as e:
-    print(e)
-    time.sleep(5)
-    main()
+#try:
+#    main()
+#except Exception as e:
+#    print(e)
+#    time.sleep(5)
+#    main()
+main()
