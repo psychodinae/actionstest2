@@ -57,7 +57,7 @@ class ForumScraper:
                 "https://www.ignboards.com/?_xfResponseType=json"
             ).json()["visitor"]["alerts_unread"]
         )
-        unread = 27
+        # unread = 27
         if not unread:
             return []
         # get the last page (two requests are made here, 303 redirect)
