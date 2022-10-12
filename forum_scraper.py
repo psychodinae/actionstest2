@@ -16,7 +16,7 @@ class ForumScraper:
 
     def reply(self,  user, img):
         url = f"{self.url}/add-reply"
-        self.payload["message"] = f"@{user} [IMG]{img}[/IMG]"
+        self.payload["message"] = f"@{user} /n{prompt} n/[IMG]{img}[/IMG]"
         self.ses.post(url, data=self.payload)
         
     def get_authorization(self, url):
