@@ -24,6 +24,8 @@ scraper = ForumScraper(thread, cookie)
 async def fetch(data, session):
     payload["prompt"] = data["phrase"]
     async with session.post(vercel, json=payload) as response:
+        if response.status > 200:
+            raise Exception(f"Server error: {response.reason}")
         res = await response.json()
         if "ok" in res and res["ok"]:
             data["img"] = res["image_url"]
