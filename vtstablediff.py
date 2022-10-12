@@ -47,7 +47,7 @@ def main():
     for user in user_responses:
         # print(user)
         if "img" in user:
-            scraper.reply(user["author"], user["img"])
+            scraper.reply(user["author"], user["phrase"], user["img"])
         time.sleep(40)
     time.sleep(40)
     main()
