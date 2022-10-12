@@ -14,9 +14,12 @@ class ForumScraper:
         self.ses.cookies.update({"xf_user": cookie})
         self.get_authorization(url)
 
-    def reply(self,  user, img):
+    def reply(self, user, prompt, img):
         url = f"{self.url}/add-reply"
-        self.payload["message"] = f"@{user} /n{prompt} n/[IMG]{img}[/IMG]"
+        self.payload["message"] = f"""
+        @{user}
+        {prompt}
+        [IMG]{img}[/IMG]"""
         self.ses.post(url, data=self.payload)
         
     def get_authorization(self, url):
