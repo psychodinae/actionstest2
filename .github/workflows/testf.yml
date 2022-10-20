@@ -14,5 +14,5 @@ jobs:
           echo conteudo
           ls -A
           echo temp
-          cd /temp
+          cd /
           pwd
